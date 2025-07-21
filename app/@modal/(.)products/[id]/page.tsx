@@ -56,9 +56,9 @@ const products = [
     }
 ]
 
-export default function ProductModal({ params }: { params: { id: string } }) {
+export default function ProductModal({ params }: { params: Promise<{ id: string }> }) {
     const router = useRouter()
-    const { id } = params;
+    const { id } = use(params);
 
     const product = products.find(p => p.id === id)
 

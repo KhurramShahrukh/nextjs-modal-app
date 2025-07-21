@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ProductDetail from '../../components/ProductDetail'
+import { use } from 'react';
 
 const products = [
     {
@@ -52,8 +53,8 @@ const products = [
     }
 ]
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-    const { id } = params;
+export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params);
     const product = products.find(p => p.id === id)
 
     if (!product) {
