@@ -37,48 +37,40 @@ export default function Modal({ children, onClose }: ModalProps) {
                 }
             }}
             style={{
-                padding: 0,
                 border: 'none',
                 borderRadius: '12px',
-                maxWidth: '90vw',
-                maxHeight: '90vh',
-                backgroundColor: 'transparent',
+                maxWidth: '100vw',
+                maxHeight: '100vh',
+                backgroundColor: 'white',
+                padding: '2rem',
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+
             }}
         >
-            <div
+            <button
+                onClick={onClose}
                 style={{
-                    backgroundColor: 'white',
-                    borderRadius: '12px',
-                    padding: '2rem',
-                    position: 'relative',
-                    maxWidth: '600px',
-                    width: '100%',
-                    maxHeight: '80vh',
-                    overflowY: 'auto',
+                    position: 'absolute',
+                    top: '1rem',
+                    right: '1rem',
+                    background: '#f5f5f5',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '32px',
+                    height: '32px',
+                    cursor: 'pointer',
+                    fontSize: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                 }}
             >
-                <button
-                    onClick={onClose}
-                    style={{
-                        position: 'absolute',
-                        top: '1rem',
-                        right: '1rem',
-                        background: '#f5f5f5',
-                        border: 'none',
-                        borderRadius: '50%',
-                        width: '32px',
-                        height: '32px',
-                        cursor: 'pointer',
-                        fontSize: '16px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    ✕
-                </button>
-                {children}
-            </div>
+                ✕
+            </button>
+            {children}
         </dialog>
     )
 }

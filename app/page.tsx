@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <div className="container" style={{ padding: '2rem 1rem' }}>
       <h1>Modal Demo App</h1>
-      <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+      <p style={{ fontSize: '1.1rem', margin: '1rem 0 2rem 0' }}>
         This app demonstrates Next.js 15 parallel and intercepting routes for modals.
         Click on any product to see it open in a modal that can be closed or navigated to directly.
       </p>

@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation'
 import Modal from '../../../components/Modal'
 import ProductDetail from '../../../components/ProductDetail'
+import { use } from 'react'
 
 const products = [
     {
@@ -57,7 +58,9 @@ const products = [
 
 export default function ProductModal({ params }: { params: { id: string } }) {
     const router = useRouter()
-    const product = products.find(p => p.id === params.id)
+    const { id } = params;
+
+    const product = products.find(p => p.id === id)
 
     if (!product) {
         return null
