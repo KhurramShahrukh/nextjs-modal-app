@@ -10,5 +10,4 @@
 
 This implementation provides a seamless modal experience while maintaining proper URL structure and browser navigation behavior.
 
-Deployed here:
-#https://nextjs-modal-app.vercel.app/
+Deployed here: https://nextjs-modal-app.vercel.app/
