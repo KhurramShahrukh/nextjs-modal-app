@@ -1,4 +1,4 @@
-## Next 15 app with gthe following key features:
+## Next 15 app with the following key features:
 
 - **Parallel Routes**: Uses `@modal` slot in the layout
 - **Intercepting Routes**: `(.)products/[id]` intercepts navigation from `/products` page
@@ -9,3 +9,6 @@
 - **Click Outside**: Clicking backdrop closes modal
 
 This implementation provides a seamless modal experience while maintaining proper URL structure and browser navigation behavior.
+
+Deployed here:
+#https://nextjs-modal-app.vercel.app/
